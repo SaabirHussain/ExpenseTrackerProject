@@ -13,8 +13,10 @@ struct MyExpenseApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            RootView()
+                .environment(\.managedObjectContext,
+                              persistenceController.container.viewContext)
         }
     }
 }
+
